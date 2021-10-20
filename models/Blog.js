@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 
 let blogSchema = mongoose.Schema({ //var replaced with let
-    
-    title:{
-        type:  String
+
+    title: {
+        type: String
     },
     des: {
         type: String
     },
     date: {
-        type: String,
+        type: Date,
         default: Date.now
     }
 });
 
-module.exports = mongoose.model("Blogpost", blogSchema); 
+module.exports = mongoose.model("Blogpost", blogSchema);

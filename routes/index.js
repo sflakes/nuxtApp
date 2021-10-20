@@ -6,9 +6,10 @@ const Blog = require('../models/Blog');
 
 
 route.post('/post', (req, res) => {
+    // console.log(req)
     const { title, des } = req.body;
 
-    if (!title || !des) {
+    if (!title||!des) {
         return res.status(400).json({ error: "All the field are required" });
     }
 
@@ -19,7 +20,7 @@ route.post('/post', (req, res) => {
 
     Blog.create(blogPost)
         .then((resData) => {
-            res.json({ PostResult: resData, message: "Post created Successfully" });
+            res.json({resData});
         })
         .catch((err) => {
             console.log(err);
@@ -33,13 +34,29 @@ route.get('/get', (req, res) => {
         .sort({ data: "DESC" })
         .then((resultData) => {
             res.json(resultData);
-        })
+        }) 
         .catch((err) => {
             console.log(err)
         });
 });
 
-// route.delete();
+// route.get('/', (req,res)=> {
+//     res.json({
+//         message: "Welcome to express app"
+//     })
+// })
+
+//delete data
+route.delete('/delete/:id', (req,res)=>{
+    let deleteQuery = {_id: req.params.id};
+
+    Blog.findByIdAndDelete(deleteQuery)
+    .then((deleteData)=> {
+        res.json({massage: "Post deleted successfully "});
+    }).catch((err)=>{
+        console.log(err);
+    });
+});
 
 
 module.exports = route;
