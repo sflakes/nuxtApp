@@ -58,5 +58,16 @@ route.delete('/delete/:id', (req,res)=>{
     });
 });
 
+//edit api
+route.get('/edit/:id', (req,res)=>{
+    let editQuery = {_id: req.params.id};
+    Blog.findOne({})
+    .then((editData)=>{
+        res.json(editData);
+    }).catch((err)=>{
+        console.log(err);
+    });
+})
+
 
 module.exports = route;
