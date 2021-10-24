@@ -21,13 +21,15 @@
           rows="5"
         ></textarea>
       </div>
-      <button
-        type="button"
-        class="btn btn-outline-success mb-2 btn-lg btn-block"
-
-      >
-        Submit
-      </button>
+      <nuxt-link to="/allpost"
+        ><button
+          type="button"
+          class="btn btn-outline-success mb-2 btn-lg btn-block"
+          @click="updatePost"
+        >
+          Edit Post
+        </button>
+      </nuxt-link>
     </form>
   </div>
 </template>
@@ -36,12 +38,15 @@
 <script>
 import axios from "axios";
 
+const urlGetEditData = "http://localhost:8080/edit/";
+const updateUrl = "http://localhost:8080/update/";
+
 export default {
   data() {
     return {
       Blog: {
-        title: " ",
-        des: " ",
+        title: "",
+        des: "",
       },
     };
   },
@@ -49,14 +54,18 @@ export default {
   methods: {
     async updatePost() {
       await axios
-        .post("http://localhost:8080/post", this.Blog)
-        .then(res=>{
+        .put(updateUrl + this.$route.params.id, this.Blog)
+        .then((res) => {
           console.log(res);
         })
-        .catch(err=>{
+        .catch((err) => {
           console.log(err);
         });
-    }
+    },
+  },
+  async mounted() {
+    const result = await axios.get(urlGetEditData + this.$route.params.id);
+    this.Blog = result.data;
   },
 };
 </script>
