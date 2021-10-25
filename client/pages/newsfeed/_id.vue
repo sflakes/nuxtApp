@@ -1,8 +1,20 @@
+
 <template>
-  <div>
-      <h3>{{Post.title}}</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 my-5">
+        <div
+          class="newsfeed card p-4 mb-3">
+          <h4>{{ Post.title }}</h4>
+          <p>{{ Post.des }}</p>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
 
 <script>
 import axios from 'axios'

@@ -32,7 +32,7 @@ route.post('/post', (req, res) => {
 route.get('/details/:id', (req, res) => {
     let detailsQuery = { _id: req.params.id };
 
-    Blog.findByIdAndDelete(detailsQuery)
+    Blog.findOne(detailsQuery)
         .then((detailsdata) => {
             res.json(detailsdata);
         }).catch((err) => {

@@ -8,7 +8,7 @@
           :key="blogPost._id"
         >
           <h4>{{ blogPost.title }}</h4>
-          <p>{{ blogPost.des }}</p>
+          <p>{{ blogPost.des.substring(0,200) }}</p>
           <div>
             <nuxt-link :to="/newsfeed/ + blogPost._id">
               <button type="button" class="btn btn-success">
