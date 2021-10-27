@@ -10,7 +10,7 @@
     </div>
     <div class="row" v-for="datapost in post" :key="datapost._id">
       <!-- <h1>{{datapost.des}}</h1> -->
-      <div class="col-md-10 mb-3 p-3">
+      <div class="col-md-10 mb-5 p-3 shadow bg-white rounded">
         <div>
           <h3>{{ datapost.title }}</h3>
           <p>{{ datapost.des }}</p>
