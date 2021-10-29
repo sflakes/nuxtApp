@@ -16,18 +16,51 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-           <nuxt-link to="/" class="nav-link text-white">Post Data</nuxt-link>
-           <nuxt-link to="/newsfeed" class="nav-link text-white">News Feed</nuxt-link>
-           <nuxt-link to="/allpost" class="nav-link text-white">All Post</nuxt-link>
+            <nuxt-link to="/newsfeed" class="nav-link text-white"
+              >News Feed</nuxt-link
+            >
+            <nuxt-link to="/allpost" class="nav-link text-white"
+              >All Post</nuxt-link
+            >
+            <nuxt-link to="/" class="nav-link text-white">Post Data</nuxt-link>
           </div>
         </div>
       </div>
+      <!-- Modal login -->
+      <div>
+        <b-button v-b-modal.modal-center class="btn btn-success"
+          >Login</b-button
+        >
+        <b-modal id="modal-center" centered title="Login">
+          <div class="my-4">
+            <b-form-input
+              v-model="text"
+              placeholder="Username"
+            ></b-form-input>
+            <!-- <div class="mt-2">Value: {{ text }}</div> -->
+          </div>
+          <div class="my-4">
+            <b-form-input
+              v-model="text"
+              placeholder="Password"
+            ></b-form-input>
+            <!-- <div class="mt-2">Value: {{ text }}</div> -->
+          </div>
+        </b-modal>
+      </div>
+      <!-- End of Modal Login -->
     </nav>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      text: "",
+    }
+  },
+};
 </script>
 
 <style>

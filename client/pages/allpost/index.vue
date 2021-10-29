@@ -54,7 +54,7 @@ export default {
         .get("http://localhost:8080/get")
         .then((Response) => {
           this.post = Response.data;
-          cosole.log(Response.data);
+          console.log(Response.data);
         })
         .catch((err) => {
           console.log(err);
