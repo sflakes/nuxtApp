@@ -3,12 +3,18 @@ const cors = require('cors');
 const app = express();
 const PORT = 8080;
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 require('./models/db');
 
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: ['http://localhost:3000']
+}
+));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cookieParser())
 
 //to connect routes to app
 app.use(require('./routes/index'));
