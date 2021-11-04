@@ -102,5 +102,17 @@ route.put('/update/:id', (req, res) => {
     })
 })
 
+//latest post api
+route.get('/latestpost', (req,res)=> {
+    Blog.find({})
+    .sort({date: "DESC"})
+    .limit(5)
+    .then((latestpost)=>{
+        res.json(latestpost);
+    }).catch((err)=>{
+        console.log(err);
+    });
+})
+
 
 module.exports = route;
