@@ -1,37 +1,56 @@
 [
   {
+    "name": "Admin",
+    "path": "/Admin",
+    "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\Admin.vue",
+    "chunkName": "pages/Admin"
+  },
+  {
     "name": "allpost",
     "path": "/allpost",
     "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\allpost\\\\index.vue",
-    "chunkName": "pages/allpost/index",
-    "_name": "_3b86f34f"
+    "chunkName": "pages/allpost/index"
+  },
+  {
+    "name": "Login",
+    "path": "/Login",
+    "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\Login.vue",
+    "chunkName": "pages/Login"
   },
   {
     "name": "newsfeed",
     "path": "/newsfeed",
     "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\newsfeed\\\\index.vue",
-    "chunkName": "pages/newsfeed/index",
-    "_name": "_d733f15a"
+    "chunkName": "pages/newsfeed/index"
+  },
+  {
+    "name": "Postdata",
+    "path": "/Postdata",
+    "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\Postdata.vue",
+    "chunkName": "pages/Postdata"
+  },
+  {
+    "name": "Register",
+    "path": "/Register",
+    "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\Register.vue",
+    "chunkName": "pages/Register"
   },
   {
     "name": "allpost-id",
     "path": "/allpost/:id",
     "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\allpost\\\\_id.vue",
-    "chunkName": "pages/allpost/_id",
-    "_name": "_60f10512"
+    "chunkName": "pages/allpost/_id"
   },
   {
     "name": "newsfeed-id",
     "path": "/newsfeed/:id",
     "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\newsfeed\\\\_id.vue",
-    "chunkName": "pages/newsfeed/_id",
-    "_name": "_6e63c27b"
+    "chunkName": "pages/newsfeed/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "E:\\\\nuxtApp\\\\client\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_9fa85a38"
+    "chunkName": "pages/index"
   }
 ]

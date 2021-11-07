@@ -31,7 +31,7 @@ router.post('/login',async (req,res)=>{
 
     if (!await bcrypt.compare(req.body.password, user.password)) {
         return res.status(404).send({
-            message: 'invalid creddential'
+            message: '401'
         })
     }
 

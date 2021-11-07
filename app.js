@@ -9,11 +9,11 @@ require('./models/db');
 
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:3000']
+    origin: ['http://localhost:3000','http://localhost:8080']
 }
 ));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 app.use(cookieParser())
 
 //to connect routes to app

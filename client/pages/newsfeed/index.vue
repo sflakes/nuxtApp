@@ -45,7 +45,7 @@ import moment from "moment";
 import {mapActions, mapState, mapMutations} from 'vuex'
 
 // const url = "http://localhost:8080/get";
-// const latestposturl = "http://localhost:8080/latestpost";
+const latestposturl = "http://localhost:8080/latestpost";
 
 export default {
   data() {
@@ -85,16 +85,16 @@ export default {
     //     console.log(err);
     //   });
 
-    // //to get latest post
-    // await axios
-    //   .get(latestposturl)
-    //   .then((reslatespost) => {
-    //     this.latestPost = reslatespost.data;
-    //     // console.log("reslatestpost");
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    //to get latest post
+    await axios
+      .get(latestposturl)
+      .then((reslatespost) => {
+        this.latestPost = reslatespost.data;
+        // console.log("reslatestpost");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 };
 </script>

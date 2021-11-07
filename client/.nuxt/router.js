@@ -4,8 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _590d46c1 = () => interopDefault(import('..\\pages\\Admin.vue' /* webpackChunkName: "pages/Admin" */))
 const _3b86f34f = () => interopDefault(import('..\\pages\\allpost\\index.vue' /* webpackChunkName: "pages/allpost/index" */))
+const _1d74d44a = () => interopDefault(import('..\\pages\\Login.vue' /* webpackChunkName: "pages/Login" */))
 const _d733f15a = () => interopDefault(import('..\\pages\\newsfeed\\index.vue' /* webpackChunkName: "pages/newsfeed/index" */))
+const _7859cf48 = () => interopDefault(import('..\\pages\\Postdata.vue' /* webpackChunkName: "pages/Postdata" */))
+const _61ea1dbe = () => interopDefault(import('..\\pages\\Register.vue' /* webpackChunkName: "pages/Register" */))
 const _60f10512 = () => interopDefault(import('..\\pages\\allpost\\_id.vue' /* webpackChunkName: "pages/allpost/_id" */))
 const _6e63c27b = () => interopDefault(import('..\\pages\\newsfeed\\_id.vue' /* webpackChunkName: "pages/newsfeed/_id" */))
 const _9fa85a38 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -22,13 +26,29 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/Admin",
+    component: _590d46c1,
+    name: "Admin"
+  }, {
     path: "/allpost",
     component: _3b86f34f,
     name: "allpost"
   }, {
+    path: "/Login",
+    component: _1d74d44a,
+    name: "Login"
+  }, {
     path: "/newsfeed",
     component: _d733f15a,
     name: "newsfeed"
+  }, {
+    path: "/Postdata",
+    component: _7859cf48,
+    name: "Postdata"
+  }, {
+    path: "/Register",
+    component: _61ea1dbe,
+    name: "Register"
   }, {
     path: "/allpost/:id",
     component: _60f10512,

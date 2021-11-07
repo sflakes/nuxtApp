@@ -1,5 +1,5 @@
 <template>
-  <div class="container card px-5 py-3 my-4">
+  <div class="container card px-5 py-3 my-5">
     <div class="row mb-3">
       <div class="col-md-10">
         <h2>All Post</h2>

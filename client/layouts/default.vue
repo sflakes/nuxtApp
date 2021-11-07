@@ -2,18 +2,17 @@
   <div>
     <Nav />
     <nuxt />
-    <!-- <Footer /> -->
+    
   </div>
 </template>
 
 <script>
-import Nav from './Nav.vue'
-import Footer from './Footer.vue'
+import Nav from '../components/Nav.vue'
+
 
 export default {
   components: {
     Nav,
-    Footer
   }  
 }
 </script>

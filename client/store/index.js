@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const state = () => ({
     Blog: [],
-    latePost: []
+    latePost: [],
 })
 
 
@@ -23,7 +23,7 @@ export const actions = {
             .then((Response) => {
                 // this.Blog = res.data;
                 commit('SET_BLOG_DATA', Response.data)
-                console.log(Response.data)
+                // console.log(Response.data)
             })
             .catch((err) => {
                 console.log('ERROR DATA', err);
