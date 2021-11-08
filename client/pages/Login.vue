@@ -50,15 +50,28 @@ export default {
         async submit(){
             await fetch("http://localhost:8080/login", {
                 method: 'POST',
-                headers: {'Content-Type': 'aplication/json'},
+                headers: {'Content-Type': 'application/json'},
                 credentials: 'include',
                 body: JSON.stringify({
                     email: this.email,
                     password: this.password
                 })
             });
-            // await this.$router.push('/');
+            await this.$router.push('/admin');
         }
+
+        // async submit(){
+        //   await axios
+        //   .post('http://localhost:8080/login',{
+        //     method: 'POST',
+        //     Headers: {'Content-Type': 'application'}
+        //   })
+        //   .then((result) => {
+            
+        //   }).catch((err) => {
+            
+        //   });
+        // }
     },
 };
 </script>
