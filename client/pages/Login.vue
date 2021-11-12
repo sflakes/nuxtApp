@@ -57,6 +57,9 @@ export default {
                     password: this.password
                 })
             });
+            // const content = await response.json();
+            // console.log(content);
+
             await this.$router.push('/admin');
         }
 
