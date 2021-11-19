@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light text-dark" v-if="!auth">
+    <nav class="navbar navbar-expand-lg navbar-light text-dark bg-success" v-if="!auth">
       <div class="container-fluid">
         <nuxt-link to="/" class="navbar-brand">ZAPDOZ</nuxt-link>
         <button
@@ -14,13 +14,6 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav text-dark">
-            <nuxt-link to="/newsfeed" class="nav-link">News Feed</nuxt-link>
-            <nuxt-link to="/allpost" class="nav-link">All Post</nuxt-link>
-            <nuxt-link to="/Postdata" class="nav-link">Post Data</nuxt-link>
-          </div>
-        </div>
       </div>
       <!-- Modal login -->
       <div class="d-flex">
@@ -62,12 +55,7 @@
       </div>
       <!-- Modal login -->
       <div class="d-flex">
-        <nuxt-link
-          to="/login"
-          class="mr-4 text-decoration-none text-dark font-weight-bold"
-        @click="logout">
-          Logout</nuxt-link
-        >
+        <a class="mr-4 text-decoration-none text-dark font-weight-bold" @click="logout">Logout</a>
       </div>
     </nav>
   </div>
@@ -85,19 +73,20 @@ export default {
   mounted() {
     this.$nuxt.$on("auth", auth => {
       this.auth = auth;
-      console.log(auth)
     });
   },
 
   methods: {
     async logout() {
-      await fetch('http://localhost:8080/logout', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        credentials: 'include',
-      });
-      await this.$router.push('/login')
-    }
+      await fetch("http://localhost:8080/logout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+      }) .then((result) => {
+        this.auth = false //silly way to set false the auth
+      })
+      await this.$router.push("/login");
+    },
   },
 };
 </script>

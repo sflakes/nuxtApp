@@ -4,16 +4,16 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _342e42fe = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
-const _3b86f34f = () => interopDefault(import('..\\pages\\allpost\\index.vue' /* webpackChunkName: "pages/allpost/index" */))
-const _1d74d44a = () => interopDefault(import('..\\pages\\Login.vue' /* webpackChunkName: "pages/Login" */))
-const _d733f15a = () => interopDefault(import('..\\pages\\newsfeed\\index.vue' /* webpackChunkName: "pages/newsfeed/index" */))
-const _7859cf48 = () => interopDefault(import('..\\pages\\Postdata.vue' /* webpackChunkName: "pages/Postdata" */))
-const _61ea1dbe = () => interopDefault(import('..\\pages\\Register.vue' /* webpackChunkName: "pages/Register" */))
-const _5122e5ae = () => interopDefault(import('..\\pages\\admin\\_id.vue' /* webpackChunkName: "pages/admin/_id" */))
-const _60f10512 = () => interopDefault(import('..\\pages\\allpost\\_id.vue' /* webpackChunkName: "pages/allpost/_id" */))
-const _6e63c27b = () => interopDefault(import('..\\pages\\newsfeed\\_id.vue' /* webpackChunkName: "pages/newsfeed/_id" */))
-const _9fa85a38 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _ae557040 = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
+const _1602fe24 = () => interopDefault(import('..\\pages\\allpost\\index.vue' /* webpackChunkName: "pages/allpost/index" */))
+const _04ed695c = () => interopDefault(import('..\\pages\\Login.vue' /* webpackChunkName: "pages/Login" */))
+const _09e02d94 = () => interopDefault(import('..\\pages\\newsfeed\\index.vue' /* webpackChunkName: "pages/newsfeed/index" */))
+const _61107fb2 = () => interopDefault(import('..\\pages\\Postdata.vue' /* webpackChunkName: "pages/Postdata" */))
+const _2628e200 = () => interopDefault(import('..\\pages\\Register.vue' /* webpackChunkName: "pages/Register" */))
+const _42587b70 = () => interopDefault(import('..\\pages\\admin\\_id.vue' /* webpackChunkName: "pages/admin/_id" */))
+const _db183254 = () => interopDefault(import('..\\pages\\allpost\\_id.vue' /* webpackChunkName: "pages/allpost/_id" */))
+const _090484fc = () => interopDefault(import('..\\pages\\newsfeed\\_id.vue' /* webpackChunkName: "pages/newsfeed/_id" */))
+const _7858b336 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -28,43 +28,43 @@ export const routerOptions = {
 
   routes: [{
     path: "/admin",
-    component: _342e42fe,
+    component: _ae557040,
     name: "admin"
   }, {
     path: "/allpost",
-    component: _3b86f34f,
+    component: _1602fe24,
     name: "allpost"
   }, {
     path: "/Login",
-    component: _1d74d44a,
+    component: _04ed695c,
     name: "Login"
   }, {
     path: "/newsfeed",
-    component: _d733f15a,
+    component: _09e02d94,
     name: "newsfeed"
   }, {
     path: "/Postdata",
-    component: _7859cf48,
+    component: _61107fb2,
     name: "Postdata"
   }, {
     path: "/Register",
-    component: _61ea1dbe,
+    component: _2628e200,
     name: "Register"
   }, {
     path: "/admin/:id",
-    component: _5122e5ae,
+    component: _42587b70,
     name: "admin-id"
   }, {
     path: "/allpost/:id",
-    component: _60f10512,
+    component: _db183254,
     name: "allpost-id"
   }, {
     path: "/newsfeed/:id",
-    component: _6e63c27b,
+    component: _090484fc,
     name: "newsfeed-id"
   }, {
     path: "/",
-    component: _9fa85a38,
+    component: _7858b336,
     name: "index"
   }],
 

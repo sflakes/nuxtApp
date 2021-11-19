@@ -2,7 +2,6 @@
   <div
     class="
       container
-      min-vh-100
       d-flex
       justify-content-center
       align-items-center
@@ -11,12 +10,12 @@
   >
     <main class="form-signin col-md-12">
       <form @submit.prevent="submit">
-        <h1 class="h3 mb-3 fw-normal">Please register</h1>
+        <h1 class="h3 mb-3 fw-normal">Register</h1>
         <div class="form-floating">
           <input
             type="name"
             class="form-control mb-3"
-            id="floatingPassword"
+            id="floatingName"
             placeholder="Name"
             v-model="name"
           />
