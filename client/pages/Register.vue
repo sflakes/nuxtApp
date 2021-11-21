@@ -6,8 +6,10 @@
       justify-content-center
       align-items-center
       col-md-4
+      mt-4
     "
   >
+  <b-card style="width: 30rem;">
     <main class="form-signin col-md-12">
       <form @submit.prevent="submit">
         <h1 class="h3 mb-3 fw-normal">Register</h1>
@@ -44,8 +46,31 @@
         <button class="w-100 btn btn-lg btn-primary" type="submit">
           Submit
         </button>
+        <h5 class="my-4">Or register with</h5>
+          <b-button disabled 
+            class="w-100 btn btn-lg my-4 btn-bg-primary"
+            type="submit"
+            @click.prevent="submit, checkForm"
+          >
+            Google
+          </b-button>
+          <b-button disabled
+            class="w-100 btn btn-lg my-4 btn-bg-primary"
+            type="submit"
+            @click.prevent="submit, checkForm"
+          >
+            Github
+          </b-button>
+          <b-button disabled
+            class="w-100 btn btn-lg my-4 btn-bg-primary"
+            type="submit"
+            @click.prevent="submit, checkForm"
+          >
+            Facebook
+          </b-button>
       </form>
     </main>
+    </b-card>
   </div>
 </template>
 

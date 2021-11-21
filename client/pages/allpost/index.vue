@@ -2,7 +2,7 @@
   <div class="container card px-5 py-3 my-5">
     <div class="row mb-3">
       <div class="col-md-10">
-        <h2>All Post</h2>
+        <h2>All Stories</h2>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-success">Check All</button>

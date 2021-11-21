@@ -3,60 +3,70 @@
     "name": "admin",
     "path": "/admin",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\admin\\\\index.vue",
-    "chunkName": "pages/admin/index"
+    "chunkName": "pages/admin/index",
+    "_name": "_ae557040"
   },
   {
     "name": "allpost",
     "path": "/allpost",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\allpost\\\\index.vue",
-    "chunkName": "pages/allpost/index"
+    "chunkName": "pages/allpost/index",
+    "_name": "_1602fe24"
   },
   {
     "name": "Login",
     "path": "/Login",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\Login.vue",
-    "chunkName": "pages/Login"
+    "chunkName": "pages/Login",
+    "_name": "_04ed695c"
   },
   {
     "name": "newsfeed",
     "path": "/newsfeed",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\newsfeed\\\\index.vue",
-    "chunkName": "pages/newsfeed/index"
+    "chunkName": "pages/newsfeed/index",
+    "_name": "_09e02d94"
   },
   {
     "name": "Postdata",
     "path": "/Postdata",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\Postdata.vue",
-    "chunkName": "pages/Postdata"
+    "chunkName": "pages/Postdata",
+    "_name": "_61107fb2"
   },
   {
     "name": "Register",
     "path": "/Register",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\Register.vue",
-    "chunkName": "pages/Register"
+    "chunkName": "pages/Register",
+    "_name": "_2628e200"
   },
   {
     "name": "admin-id",
     "path": "/admin/:id",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\admin\\\\_id.vue",
-    "chunkName": "pages/admin/_id"
+    "chunkName": "pages/admin/_id",
+    "_name": "_42587b70"
   },
   {
     "name": "allpost-id",
     "path": "/allpost/:id",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\allpost\\\\_id.vue",
-    "chunkName": "pages/allpost/_id"
+    "chunkName": "pages/allpost/_id",
+    "_name": "_db183254"
   },
   {
     "name": "newsfeed-id",
     "path": "/newsfeed/:id",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\newsfeed\\\\_id.vue",
-    "chunkName": "pages/newsfeed/_id"
+    "chunkName": "pages/newsfeed/_id",
+    "_name": "_090484fc"
   },
   {
     "name": "index",
     "path": "/",
     "component": "F:\\\\nuxtApp\\\\client\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_7858b336"
   }
 ]

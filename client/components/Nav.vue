@@ -1,8 +1,8 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light text-dark bg-success" v-if="!auth">
+    <nav class="navbar navbar-expand-lg navbar-light text-dark" v-if="!auth">
       <div class="container-fluid">
-        <nuxt-link to="/" class="navbar-brand">ZAPDOZ</nuxt-link>
+        <nuxt-link to="/" class="navbar-brand text-white">ZAPDOZ</nuxt-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -18,14 +18,19 @@
       <!-- Modal login -->
       <div class="d-flex">
         <nuxt-link
+          to="/allpost"
+          class="mr-4 text-decoration-none font-weight-bold text-white"
+          >Stories</nuxt-link
+        >
+        <nuxt-link
           to="/login"
-          class="mr-4 text-decoration-none text-dark font-weight-bold"
+          class="mr-4 text-decoration-none font-weight-bold text-white"
         >
           Login</nuxt-link
         >
         <nuxt-link
           to="/register"
-          class="mr-2 text-decoration-none text-dark font-weight-bold"
+          class="mr-2 text-decoration-none font-weight-bold text-white"
           >Register</nuxt-link
         >
       </div>
@@ -47,6 +52,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav text-dark">
+            <nuxt-link
+              to="/register"
+              class="mr-4 text-decoration-none font-weight-bold text-white"
+              >Stories</nuxt-link
+            >
             <nuxt-link to="/newsfeed" class="nav-link">News Feed</nuxt-link>
             <nuxt-link to="/allpost" class="nav-link">All Post</nuxt-link>
             <nuxt-link to="/Postdata" class="nav-link">Post Data</nuxt-link>
@@ -55,7 +65,11 @@
       </div>
       <!-- Modal login -->
       <div class="d-flex">
-        <a class="mr-4 text-decoration-none text-dark font-weight-bold" @click="logout">Logout</a>
+        <a
+          class="mr-4 text-decoration-none text-dark font-weight-bold"
+          @click="logout"
+          >Logout</a
+        >
       </div>
     </nav>
   </div>
@@ -71,7 +85,7 @@ export default {
   },
 
   mounted() {
-    this.$nuxt.$on("auth", auth => {
+    this.$nuxt.$on("auth", (auth) => {
       this.auth = auth;
     });
   },
@@ -82,9 +96,9 @@ export default {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-      }) .then((result) => {
-        this.auth = false //silly way to set false the auth
-      })
+      }).then((result) => {
+        this.auth = false; //silly way to set false the auth
+      });
       await this.$router.push("/login");
     },
   },

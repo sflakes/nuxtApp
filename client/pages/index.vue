@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="backgroundImage">
-      <div class="section text-center">
+    <div>
+      <div class="section text-center text-white" style="margin-top: 10rem">
         <h1>ZAPDOZ is a place to write, read, and connect</h1>
         <p>
           It's easy and free to post your thinking on any topic and connect each
@@ -9,28 +9,24 @@
         </p>
       </div>
     </div>
-    <section>
-      <div class="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolores?</div>
-      <div class="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolores?</div>
-      <div class="div3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolores?</div>
-      <div class="div4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolores?</div>
-    </section>
+    <Section />
   </div>
 </template>
 
 <script>
-export default {};
+import Section from "../components/Section.vue";
+
+export default {
+  components: {
+    Section,
+  },
+};
 </script>
 
 <style>
-.backgroundImage {
-  height: 40rem;
-  width: 100;
-  background-image: url("../assets/city2.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-}
+/* .container {
+  margin-top: 35rem;
+} */
 
 section {
   background-color: aqua;
@@ -40,14 +36,16 @@ section {
   width: 70%;
   height: 100rem;
 }
-section .div1, .div4 {
+section .div1,
+.div4 {
   width: 500px;
   height: 400px;
   background-color: rgb(28, 28, 187);
 }
 
-section .div2, .div3 {
-   width: 500px;
+section .div2,
+.div3 {
+  width: 500px;
   height: 400px;
   background-color: rgb(56, 212, 119);
 }
