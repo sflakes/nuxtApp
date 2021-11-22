@@ -7,15 +7,16 @@ const Blog = require('../models/Blog');
 
 route.post('/post', (req, res) => {
     // console.log(req)
-    const { title, des } = req.body;
+    const { title, des, author } = req.body;
 
-    if (!title || !des) {
+    if (!title || !des || ! author) {
         return res.status(400).json({ error: "All the field are required" });
     }
 
     const blogPost = Blog({
         title,
-        des
+        des,
+        author
     });
 
     Blog.create(blogPost)
@@ -49,7 +50,7 @@ route.get('/get', (req, res) => {
             res.json(resultData);
         })
         .catch((err) => {
-            console.log(err)
+            console.log(err);
         });
 });
 
@@ -93,14 +94,15 @@ route.put('/update/:id', (req, res) => {
     Blog.updateOne(updateQuery, {
         $set: {
             title: req.body.title,
-            des: req.body.des
+            des: req.body.des,
+            author: req.body.author
         },
     }).then((updatedata) => {
         res.json(updatedata);
     }).catch((err) => {
         console.log(err);
-    })
-})
+    });
+});
 
 //latest post api
 route.get('/latestpost', (req,res)=> {
@@ -112,7 +114,7 @@ route.get('/latestpost', (req,res)=> {
     }).catch((err)=>{
         console.log(err);
     });
-})
+});
 
 
 module.exports = route;

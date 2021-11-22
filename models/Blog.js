@@ -11,6 +11,9 @@ let blogSchema = mongoose.Schema({ //var replaced with let
     date: {
         type: Date,
         default: Date.now
+    },
+    author: {
+        type: String
     }
 });
 

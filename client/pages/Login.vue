@@ -67,14 +67,24 @@
 </template>
 
 <script>
+// import {ValidationObserver, ValidationProvider} from 'vee-validate';
+
+
 export default {
+  // components: {
+  //   ValidationObserver,
+  //   ValidationProvider
+  // },
+
   data() {
     return {
       email: "",
       password: "",
-      errors: [],
+      // errors: [],
+      
     };
   },
+
   methods: {
     async submit() {
       await fetch("http://localhost:8080/login", {
@@ -85,13 +95,35 @@ export default {
           email: this.email,
           password: this.password,
         }),
-      });
-      // const content = await response.json();
+      }).then((response)=> {
+          // console.log(response.statusText)
+          if (response.ok) {
+            console.log("User founded")
+            this.$router.push('/admin')
+          }else{
+            console.log("user not found")
+            this.$router.push('/register')
+          }
+      }).catch((error)=>{
+        console.log(error)
+      })
+     // await this.$router.push('/admin');
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  // const content = await response.json();
       // console.log(content);
-
-      await this.$router.push('/admin');
-    },
-
     // checkForm(e) {
     //   if (this.email && this.password) {
     //     return true;

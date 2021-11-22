@@ -6,7 +6,17 @@
         <label for="exampleFormControlInput1">Title :</label>
         <input
           v-model="Blogpost.title"
-          type="email"
+          type="string"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Please write post title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Author :</label>
+        <input
+          v-model="Blogpost.author"
+          type="string"
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="Please write post title"
@@ -18,7 +28,7 @@
           v-model="Blogpost.des"
           class="form-control"
           id="exampleFormControlTextarea1"
-          rows="5"
+          rows="20"
         ></textarea>
       </div>
       <button
@@ -43,6 +53,7 @@ export default {
       Blogpost: {
         title: " ",
         des: " ",
+        author: " ",
       },
     };
   },

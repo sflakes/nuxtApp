@@ -18,7 +18,7 @@
       <!-- Modal login -->
       <div class="d-flex">
         <nuxt-link
-          to="/allpost"
+          to="/newsfeed"
           class="mr-4 text-decoration-none font-weight-bold text-white"
           >Stories</nuxt-link
         >
@@ -53,7 +53,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav text-dark">
             <nuxt-link
-              to="/register"
+              to="/newsfeed"
               class="mr-4 text-decoration-none font-weight-bold text-white"
               >Stories</nuxt-link
             >
